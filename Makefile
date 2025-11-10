@@ -197,6 +197,7 @@ include $(PB_ROOT)/sw/sw.mk
 TB_DUT = tb_picobello_top
 
 include $(PB_ROOT)/target/sim/vsim/vsim.mk
+include $(PB_ROOT)/target/sim/vcs/vcs.mk
 include $(PB_ROOT)/target/sim/traces.mk
 
 ##################

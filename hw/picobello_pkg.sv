@@ -87,7 +87,7 @@ package picobello_pkg;
   localparam int unsigned NumClusters = Cheshire - ClusterX0Y0;
   localparam int unsigned NumMemTiles = NumEndpoints - L2Spm0;
 
-  localparam int unsigned NumDummyTiles = NumTiles - $countones(MeshMap);
+  localparam int unsigned NumDummyTiles = 2;//NumTiles - $countones(MeshMap);
 
 
   // This function will generate a bit map indicating which columns are empty.

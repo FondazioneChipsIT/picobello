@@ -358,7 +358,8 @@ module picobello_top
     .SpmNumBanksPerWord(SpmWideNumBanksPerWord),
     .SpmNumBankRows    (SpmWideNumBankRows),
     .IsNarrow          (1'b0)
-  ) i_wide_spm_tile (
+// SECOND  
+) i_wide_spm_tile (
     .clk_i,
     .rst_ni,
     .test_enable_i(test_mode_i),
@@ -380,6 +381,8 @@ module picobello_top
     localparam id_t DummyTileId = DummyIdx[d];
     localparam int DummyTileX = int'(DummyPhysicalIdx[d].x);
     localparam int DummyTileY = int'(DummyPhysicalIdx[d].y);
+
+    // FIRST
 
     dummy_tile i_dummy_tile (
       .clk_i,

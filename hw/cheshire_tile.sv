@@ -220,7 +220,7 @@ module cheshire_tile
       AddrWidth: AxiCfgN.AddrWidth,
       DataWidth: AxiCfgN.DataWidth,
       UserWidth: max(AxiCfgN.UserWidth, AxiCfgW.UserWidth),
-      InIdWidth: 0,  // Not used in `nw_join`
+      InIdWidth: 1,  // Not used in `nw_join`
       OutIdWidth: max(AxiCfgN.OutIdWidth, AxiCfgW.OutIdWidth)
   };
 
