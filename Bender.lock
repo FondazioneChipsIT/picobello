@@ -25,10 +25,10 @@ packages:
     - obi_peripherals
     - register_interface
   axi:
-    revision: bec548fa2a9b18cbd7531105bb1fdf481ea8ad49
+    revision: 56956e55127fa17ff487b3dc58be13de7eba0909
     version: null
     source:
-      Git: https://github.com/colluca/axi.git
+      Git: https://github.com/pulp-platform/axi.git
     dependencies:
     - common_cells
     - common_verification
@@ -88,10 +88,10 @@ packages:
     - common_cells
     - register_interface
   cheshire:
-    revision: 0bebd9a2d6edb4665b00d2db9442c059692c0664
+    revision: b94a6de5bde98d28ae1d90e29ad37cd6d20d5550
     version: null
     source:
-      Git: https://github.com/pulp-platform/cheshire.git
+      Git: https://github.com/FondazioneChipsIT/cheshire.git
     dependencies:
     - apb_uart
     - axi
@@ -207,7 +207,7 @@ packages:
       Path: .deps/fhg_spu_cluster
     dependencies: []
   floo_noc:
-    revision: ea35a9909d60d552bbdafc7e898590f326b1898a
+    revision: 76c84c65fc77c3ff65cce957fee6185745f0f1ff
     version: null
     source:
       Git: https://github.com/pulp-platform/FlooNoC.git
@@ -233,7 +233,7 @@ packages:
     dependencies:
     - common_cells
   hci:
-    revision: fa625bdb824209bc2c0faaa6d99ec15ff981473f
+    revision: 520ebaa03184c2da67a9959626d819d3eb3ef856
     version: null
     source:
       Git: https://github.com/pulp-platform/hci
@@ -252,7 +252,7 @@ packages:
     dependencies:
     - tech_cells_generic
   hwpe-stream:
-    revision: 7eb50a7cb37dc2a970e0cfee10aff5d961e41340
+    revision: 401bf62116712bac8b7ee284a1007249791b05df
     version: null
     source:
       Git: https://github.com/pulp-platform/hwpe-stream.git

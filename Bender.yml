@@ -9,14 +9,14 @@ package:
 
 dependencies:
   register_interface: { git: "https://github.com/pulp-platform/register_interface.git", version: "0.4.5"                                }
-  axi:                { git: "https://github.com/pulp-platform/axi.git",                version: "0.39.6"                               }
+  axi:                { git: "https://github.com/pulp-platform/axi.git",                rev: "56956e55127fa17ff487b3dc58be13de7eba0909" }
   common_cells:       { git: "https://github.com/pulp-platform/common_cells.git",       rev: "snitch"                                   }
-  cheshire:           { git: "https://github.com/pulp-platform/cheshire.git",           rev: "picobello"                                }
+  cheshire:           { git: "https://github.com/FondazioneChipsIT/cheshire.git",       rev: "b94a6de5bde98d28ae1d90e29ad37cd6d20d5550" }
   snitch_cluster:     { git: "https://github.com/pulp-platform/snitch_cluster.git",     rev: "5d6c957c70e3824e2330d8308eb904724cd41cbe" }
-  floo_noc:           { git: "https://github.com/pulp-platform/FlooNoC.git",            rev: "develop"                                  }
+  floo_noc:           { git: "https://github.com/pulp-platform/FlooNoC.git",            rev: "76c84c65fc77c3ff65cce957fee6185745f0f1ff" }
   obi:                { git: "https://github.com/pulp-platform/obi.git",                rev: "acfcd0f80c7539aa8da7821a66d9acf2074a5b4e" }
   redmule:            { git: "https://github.com/pulp-platform/redmule.git",            rev: "picobello"                                }
-  hci:                { git: "https://github.com/pulp-platform/hci.git",                rev: "06fcba671e060f2e1b03b7ebe2d3e719f1557099" }
+  hci:                { git: "https://github.com/pulp-platform/hci.git",                rev: "520ebaa03184c2da67a9959626d819d3eb3ef856" }
   datamover:          { git: "https://github.com/pulp-platform/datamover.git",          rev: "5df9c9bd9e10ad020763c4291c571adf35ef4ae2" } # branch: transpose
   apb:                { git: "https://github.com/pulp-platform/apb.git",                version: "0.2.4"                                }
   apb_fll_if:         { git: "https://github.com/pulp-platform/apb_fll_if.git",         rev: "structs"                                  }
