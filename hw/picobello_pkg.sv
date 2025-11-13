@@ -75,8 +75,11 @@ package picobello_pkg;
     end
     // Count the number of rows that have at least one tile
     for (int row = 0; row <= MaxId.y; row++) begin
-      if ($countones(MeshMap[row]) > 0) begin
-        row_cnt++;
+      for (int col = 0; col <= MaxId.x; col++) begin
+        if (MeshMap[row][col] == 1'b1) begin
+          row_cnt++;
+          break;
+        end
       end
     end
     return '{x: column_cnt, y: row_cnt};
@@ -87,7 +90,7 @@ package picobello_pkg;
   localparam int unsigned NumClusters = Cheshire - ClusterX0Y0;
   localparam int unsigned NumMemTiles = NumEndpoints - L2Spm0;
 
-  localparam int unsigned NumDummyTiles = 2;//NumTiles - $countones(MeshMap);
+  localparam int unsigned NumDummyTiles = NumTiles - $countones(MeshMap);
 
 
   // This function will generate a bit map indicating which columns are empty.
@@ -285,6 +288,17 @@ package picobello_pkg;
     logic [aw_bt'(AxiCfgN.AddrWidth)-1:0] end_addr;
   } sam_multicast_rule_t;
 
+  function automatic int countones(input bit [MaxId.x:0] vec);
+    int count = 0;
+    // Count how many empty columns are to the left of the current tile
+    for (int col = 0; col < MaxId.x+1; col++) begin
+      if (vec[col] == 1'b1) begin
+        count++;
+      end
+    end
+    return count;
+  endfunction
+
 
   // Packed original SAM with extra information necessary for multicast handling
   function automatic sam_multicast_rule_t [SamNumRules-1:0] get_sam_multicast();
@@ -310,8 +324,8 @@ package picobello_pkg;
     // TODO(lleone): This is a temporary solution. In a fully configurable system,
     // the base ID doesn't match with the number of empty rows/columns. This is
     // true only in the 7x4 mesh.
-    empty_cols  = $countones(get_empty_cols(MeshMap) + 1);
-    empty_rows  = $countones(get_empty_rows(MeshMap));
+    empty_cols  = countones(get_empty_cols(MeshMap) + 1);
+    empty_rows  = countones(get_empty_rows(MeshMap));
 
     for (int rule = 0; rule < SamNumRules; rule++) begin
       sam_multicast[rule].idx.id     = Sam[rule].idx;

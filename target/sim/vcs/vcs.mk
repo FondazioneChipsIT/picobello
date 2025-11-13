@@ -52,11 +52,12 @@ vcs-compile: $(VCS_DIR)/compile.sh $(PB_HW_ALL)
 
 $(VCS_DIR)/compile.sh: $(BENDER_YML) $(BENDER_LOCK)
 	bender script vcs --vlogan-bin="vcs-2025.06-dz vlogan" --compilation-mode=separate $(COMMON_TARGS) $(SIM_TARGS) --vlog-arg="$(VLOGAN_ARGS)" > $@
-	echo 'vlog -work $(VCS_WORK) "$(realpath $(CHS_ROOT))/target/sim/src/elfloader.cpp" -ccflags "-std=c++11"' >> $@
 	chmod +x $@
+#	echo 'vlog -work $(VCS_WORK) "$(realpath $(CHS_ROOT))/target/sim/src/elfloader.cpp" -ccflags "-std=c++11"' >> $@
+	
 
 vcs-run:
-	$(VCS) $(VCS_FLAGS) $(VCS_FLAGS_GUI) $(TB_DUT) -do "log -r /*"
+	$(VCS) vcs $(VCS_FLAGS) $(VCS_FLAGS_GUI) $(TB_DUT) -do "log -r /*"
 
 vcs-run-batch:
 	$(VCS) -c $(VCS_FLAGS) $(TB_DUT) -do "run -all; quit"
@@ -65,3 +66,6 @@ vcs-run-batch-verify: vcs-run-batch
 ifdef VERIFY_PY
 	$(VERIFY_PY) placeholder $(SN_BINARY) --no-ipc --memdump l2mem.bin --memaddr 0x70000000
 endif
+
+
+#-ignore initializer_driver_checks -j8

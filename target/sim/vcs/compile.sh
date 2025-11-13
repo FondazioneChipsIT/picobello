@@ -3,7 +3,7 @@
 # Set propagation of error to exit on first error
 set -e
 
-ROOT="/scratch2/abelano/picobello"
+ROOT="/scratch/rfiorani/picobello"
 
 vcs-2025.06-dz vlogan -sverilog \
     -full64 \
@@ -3295,7 +3295,6 @@ vcs-2025.06-dz vlogan -sverilog \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch_ssr/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/tcdm_interface/include" \
-    "+incdir+$ROOT/pd/tsmc7/src/include" \
     "$ROOT/.generated/floo_picobello_noc_pkg.sv" \
     "$ROOT/.generated/snitch_cluster_pkg.sv" \
     "$ROOT/.generated/pb_soc_regs_pkg.sv" \
@@ -3328,7 +3327,6 @@ vcs-2025.06-dz vlogan -sverilog \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch_ssr/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/tcdm_interface/include" \
-    "+incdir+$ROOT/pd/tsmc7/src/include" \
     "$ROOT/hw/picobello_pkg.sv" \
     "$ROOT/hw/snitch_hwpe_subsystem.sv" \
     "$ROOT/hw/snitch_tcdm_aligner.sv" \
@@ -3364,7 +3362,6 @@ vcs-2025.06-dz vlogan -sverilog \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch_ssr/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/tcdm_interface/include" \
-    "+incdir+$ROOT/pd/tsmc7/src/include" \
     "$ROOT/hw/fhg_spu_tile.sv" 
 
 vcs-2025.06-dz vlogan -sverilog \
@@ -3393,7 +3390,6 @@ vcs-2025.06-dz vlogan -sverilog \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch_ssr/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/tcdm_interface/include" \
-    "+incdir+$ROOT/pd/tsmc7/src/include" \
     "$ROOT/hw/picobello_top.sv" 
 
 vcs-2025.06-dz vlogan -sverilog \
@@ -3423,10 +3419,8 @@ vcs-2025.06-dz vlogan -sverilog \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/snitch_ssr/include" \
     "+incdir+$ROOT/.bender/git/checkouts/snitch_cluster-cd1ed6e21c5f7daa/hw/tcdm_interface/include" \
     "+incdir+$ROOT/.generated" \
-    "+incdir+$ROOT/pd/tsmc7/src/include" \
     "+incdir+$ROOT/target/sim/include" \
     "$ROOT/target/sim/src/fixture_picobello_top.sv" \
     "$ROOT/target/sim/src/tb_picobello_top.sv" 
 
 
-vlog -work /scratch2/abelano/picobello/target/sim/vcs/work "/scratch2/abelano/picobello/.bender/git/checkouts/cheshire-dd989cd2c3deacd6/target/sim/src/elfloader.cpp" -ccflags "-std=c++11"
