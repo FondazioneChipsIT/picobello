@@ -178,7 +178,7 @@ PB_HW_ALL += update-sn-cfg
 
 .PHONY: picobello-hw-all picobello-clean clean
 
-picobello-hw-all all: $(PB_HW_ALL) sn-hw-all
+picobello-hw-all all: bender $(PB_HW_ALL) sn-hw-all
 	$(MAKE) $(PB_HW_ALL)
 
 picobello-hw-clean clean: sn-hw-clean floo-clean
@@ -188,7 +188,8 @@ picobello-hw-clean clean: sn-hw-clean floo-clean
 # Software #
 ############
 
-include $(PB_ROOT)/sw/sw.mk
+# Removed for this branch as tests are precompiled
+#include $(PB_ROOT)/sw/sw.mk
 
 ##############
 # Simulation #
@@ -261,14 +262,14 @@ help:
 	@echo -e "${Green}sn-hw-clean          ${Black}Clean Snitch Cluster wrapper RTL."
 	@echo -e "${Green}chs-hw-all           ${Black}Generate Cheshire RTL."
 	@echo -e ""
-	@echo -e "Software:"
-	@echo -e "${Green}sw                   ${Black}Compile all software tests."
-	@echo -e "${Green}sw-clean             ${Black}Clean all software tests."
-	@echo -e "${Green}chs-sw-tests         ${Black}Compile Cheshire software tests."
-	@echo -e "${Green}chs-sw-tests-clean   ${Black}Clean Cheshire software tests."
-	@echo -e "${Green}sn-tests             ${Black}Compile Snitch software tests."
-	@echo -e "${Green}sn-clean-tests       ${Black}Clean Snitch software tests."
-	@echo -e ""
+#   @echo -e "Software:"
+#   @echo -e "${Green}sw                   ${Black}Compile all software tests."
+#   @echo -e "${Green}sw-clean             ${Black}Clean all software tests."
+#   @echo -e "${Green}chs-sw-tests         ${Black}Compile Cheshire software tests."
+#   @echo -e "${Green}chs-sw-tests-clean   ${Black}Clean Cheshire software tests."
+#	@echo -e "${Green}sn-tests             ${Black}Compile Snitch software tests."
+#	@echo -e "${Green}sn-clean-tests       ${Black}Clean Snitch software tests."
+#	@echo -e ""
 	@echo -e "Simulation targets:"
 	@echo -e "${Green}vsim-compile         ${Black}Compile with Questasim."
 	@echo -e "${Green}vsim-run             ${Black}Run QuestaSim simulation in GUI mode w/o optimization."
