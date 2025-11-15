@@ -42,8 +42,8 @@ vcs-clean:
 	rm -f $(VCS_DIR)/*.log
 
 vcs-compile: $(VCS_DIR)/compile.sh $(PB_HW_ALL)
-	cd $(VCS_DIR); $<
-	cd $(VCS_DIR); $(VCS_PREFIX) vcs $(VCS_FLAGS) $(CHS_ROOT)/target/sim/src/elfloader.cpp $(TB_DUT) -j8
+	cd $(VCS_DIR); $< | tee vlogan.log
+	cd $(VCS_DIR); $(VCS_PREFIX) vcs $(VCS_FLAGS) $(CHS_ROOT)/target/sim/src/elfloader.cpp $(TB_DUT) -j16 | tee vcs.log
 
 $(VCS_DIR)/compile.sh: $(BENDER_YML) $(BENDER_LOCK)
 	bender script vcs --vlogan-bin="$(VCS_PREFIX) vlogan" --compilation-mode=separate $(COMMON_TARGS) $(SIM_TARGS) --vlog-arg="$(VLOGAN_ARGS)" > $@
