@@ -34,17 +34,12 @@ L2_TILES = $(shell $(FLOO_GEN) -c $(FLOO_CFG) --query endpoints.l2_spm.num 2>/de
 BENDER_YML = $(PB_ROOT)/Bender.yml
 BENDER_LOCK = $(PB_ROOT)/Bender.lock
 
-##########
-# Bender #
-##########
+################
+# Bender flags #
+################
 
 COMMON_TARGS += -t rtl -t cva6 -t cv64a6_imafdcsclic_sv39 -t snitch_cluster -t pb_gen_rtl
 SIM_TARGS += -t simulation -t test -t idma_test
-
-bender:
-	curl --proto '=https'  \
-	--tlsv1.2 https://pulp-platform.github.io/bender/init -sSf | sh -s -- 0.28.1 \
-	export PATH=$(pwd):$(PATH)
 
 #############
 # systemRDL #
