@@ -49,5 +49,8 @@ $(VCS_DIR)/compile.sh: $(BENDER_YML) $(BENDER_LOCK)
 	bender script vcs --vlogan-bin="$(VCS_PREFIX) vlogan" --compilation-mode=separate $(COMMON_TARGS) $(SIM_TARGS) --vlog-arg="$(VLOGAN_ARGS)" > $@
 	chmod +x $@
 
-vcs-run:
+$(VCS_DIR)/simv:
+	$(MAKE) vcs-compile
+
+vcs-run: $(VCS_DIR)/simv
 	cd $(VCS_DIR); ./simv $(VCS_FLAGS)

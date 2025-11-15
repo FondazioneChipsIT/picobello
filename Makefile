@@ -183,7 +183,7 @@ PB_HW_ALL += update-sn-cfg
 
 .PHONY: picobello-hw-all picobello-clean clean
 
-picobello-hw-all all: bender $(PB_HW_ALL) sn-hw-all
+picobello-hw-all all: $(PB_HW_ALL) sn-hw-all
 	$(MAKE) $(PB_HW_ALL)
 
 picobello-hw-clean clean: sn-hw-clean floo-clean
