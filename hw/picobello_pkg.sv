@@ -90,7 +90,7 @@ package picobello_pkg;
   localparam int unsigned NumClusters = Cheshire - ClusterX0Y0;
   localparam int unsigned NumMemTiles = NumEndpoints - L2Spm0;
 
-  localparam int unsigned NumDummyTiles = NumTiles - $countones(MeshMap);
+  localparam int unsigned NumDummyTiles = 0; // NumTiles - $countones(MeshMap);
 
 
   // This function will generate a bit map indicating which columns are empty.
@@ -179,44 +179,6 @@ package picobello_pkg;
   localparam sam_rule_t [SamNumRules-1:0] SamPhysical = align_x_coordinate(
       floo_picobello_noc_pkg::Sam, EmptyCols
   );
-
-  // Dummy tiles X, Y coordinates
-  typedef id_t [NumDummyTiles-1:0] dummy_idx_t;
-
-  // This function is used to identify
-  function automatic dummy_idx_t get_dummy_idx(mesh_map_t MeshMap, int Dim_x, int Dim_y);
-    dummy_idx_t  dummy_idx;
-    int unsigned empty_tile = 0;
-    int unsigned found_tiles = 0;
-
-    // Count the number of columns that have at least one tile
-    for (int col = 0; col <= MaxId.x; col++) begin
-      // Clear counter for the next column
-      empty_tile = 0;
-      for (int row = 0; row <= MaxId.y; row++) begin
-        if (MeshMap[row][col] == 1'b1) begin
-        end else if (empty_tile <= MaxId.y) begin
-          // If the tile is empty, we can add it to the dummy index
-          dummy_idx[found_tiles] = '{x : col, y : row, port_id: 0};
-          found_tiles++;
-          empty_tile++;
-        end else begin
-          // If the full column is empty, we don't need to insert dummy tiles
-          found_tiles -= empty_tile;
-          break;
-        end
-      end
-    end
-    return dummy_idx;
-  endfunction
-
-  // localparam dummy_idx_t DummyIdx = get_dummy_idx(MeshMap, MeshDim.x, MeshDim.y);
-  localparam dummy_idx_t DummyIdx = '{'{x: 9, y: 2, port_id: 1}, '{x: 9, y: 1, port_id: 0}};
-  localparam dummy_idx_t DummyPhysicalIdx = '{
-      '{x: 6, y: 2, port_id: 1},
-      '{x: 6, y: 1, port_id: 0}
-  };
-
 
   // Whether the connection is a tie-off or a valid neighbor
   function automatic bit is_tie_off(int x, int y, route_direction_e dir);

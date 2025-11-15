@@ -8,7 +8,7 @@ XCELIUM_DIR     = $(PB_ROOT)/target/sim/xcelium
 XCELIUM_WORK    = $(XCELIUM_DIR)/xcelium.d
 XCELIUM        ?=
 XCELIUM_ACC    ?= ON
-XCELIUM_BIN_DIR = $(shell which $(XCELIUM) xrun | rev | cut -c6- | rev)
+XCELIUM_BIN_DIR = $(shell type -P $(XCELIUM) xrun | rev | cut -c6- | rev)
 
 XCELIUM_FLAGS += -64BIT
 

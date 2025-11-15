@@ -46,14 +46,11 @@ datamover_DIR="$(bender path datamover)"
 floo_noc_DIR="$(bender path floo_noc)"
 redmule_DIR="$(bender path redmule)"
 snitch_cluster_DIR="$(bender path snitch_cluster)"
-
-questa_DIR="$(which $VSIM vsim | rev | cut -c6- | rev)/.."
-
-
+XCELIUM_BIN_DIR="$(type -P $XCELIUM xrun | rev | cut -c6- | rev)"
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -70,7 +67,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -89,7 +86,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -103,7 +100,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -118,7 +115,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -132,7 +129,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -151,7 +148,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -165,7 +162,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -179,7 +176,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -195,7 +192,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -210,7 +207,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -276,7 +273,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -320,7 +317,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -335,7 +332,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -372,7 +369,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -401,7 +398,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -422,7 +419,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -438,7 +435,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -455,7 +452,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -527,7 +524,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -546,7 +543,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -587,7 +584,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -609,7 +606,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -635,7 +632,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -656,7 +653,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -694,7 +691,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -712,7 +709,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -732,7 +729,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -750,7 +747,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -807,7 +804,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -849,7 +846,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -900,7 +897,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -917,7 +914,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -961,7 +958,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -984,7 +981,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1023,7 +1020,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1052,7 +1049,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1071,7 +1068,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1088,7 +1085,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1105,7 +1102,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1127,7 +1124,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1163,7 +1160,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1196,7 +1193,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1215,7 +1212,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1256,7 +1253,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1275,7 +1272,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1299,7 +1296,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1316,7 +1313,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1345,7 +1342,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1366,7 +1363,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1383,7 +1380,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1407,7 +1404,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1425,7 +1422,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1441,7 +1438,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1468,7 +1465,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1485,7 +1482,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1527,7 +1524,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1544,7 +1541,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1561,7 +1558,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define CV32E40P_TRACE_EXECUTION \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
@@ -1580,7 +1577,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1640,7 +1637,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1656,7 +1653,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1682,7 +1679,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1761,7 +1758,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1778,7 +1775,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1795,7 +1792,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1815,7 +1812,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1832,7 +1829,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1848,7 +1845,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1900,7 +1897,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1923,7 +1920,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -1939,7 +1936,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define RVFI=true \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
@@ -1979,7 +1976,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2018,7 +2015,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2040,7 +2037,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2065,7 +2062,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2087,7 +2084,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2114,7 +2111,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2136,7 +2133,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2158,7 +2155,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2180,7 +2177,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2202,7 +2199,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2233,7 +2230,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2255,7 +2252,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2274,7 +2271,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2291,7 +2288,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2345,7 +2342,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2365,7 +2362,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2380,7 +2377,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2398,7 +2395,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2413,7 +2410,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2431,7 +2428,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2463,7 +2460,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2486,7 +2483,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2508,7 +2505,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2525,7 +2522,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2544,7 +2541,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2575,7 +2572,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2604,7 +2601,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2623,7 +2620,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2679,7 +2676,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2722,7 +2719,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2755,7 +2752,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2781,7 +2778,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2811,7 +2808,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2838,7 +2835,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2864,7 +2861,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2890,7 +2887,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2919,7 +2916,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2945,7 +2942,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -2972,7 +2969,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3003,7 +3000,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define SNITCH_ENABLE_PERF \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
@@ -3030,7 +3027,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3056,7 +3053,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3082,7 +3079,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3110,7 +3107,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3143,7 +3140,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3172,7 +3169,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3213,7 +3210,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3239,7 +3236,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3265,7 +3262,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3297,7 +3294,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3332,7 +3329,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3360,7 +3357,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \
@@ -3388,7 +3385,7 @@ xmvlog -SV \
 
 xmvlog -SV \
     -64BIT \
-    -VTIMESCALE 1ns/1ps -INCDIR $questa_DIR/verilog_src/uvm-1.1d/src $questa_DIR/verilog_src/uvm-1.1d/src/uvm_pkg.sv \
+    -VTIMESCALE 1ns/1ps -INCDIR $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src $XCELIUM_BIN_DIR/../methodology/UVM/CDNS-1.1d/sv/src/uvm_pkg.sv \
     -define TARGET_CV64A6_IMAFDCSCLIC_SV39 \
     -define TARGET_CVA6 \
     -define TARGET_IDMA_TEST \

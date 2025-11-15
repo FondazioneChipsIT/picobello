@@ -372,32 +372,6 @@ module picobello_top
     .floo_wide_i  (floo_wide_in[SpmWideTileX][SpmWideTileY])
   );
 
-  ////////////////
-  // Dummy tile //
-  ////////////////
-
-  for (genvar d = 0; d < NumDummyTiles; d++) begin : gen_dummytiles
-
-    localparam id_t DummyTileId = DummyIdx[d];
-    localparam int DummyTileX = int'(DummyPhysicalIdx[d].x);
-    localparam int DummyTileY = int'(DummyPhysicalIdx[d].y);
-
-    // FIRST
-
-    dummy_tile i_dummy_tile (
-      .clk_i,
-      .rst_ni,
-      .test_enable_i(test_mode_i),
-      .id_i         (DummyTileId),
-      .floo_req_o   (floo_req_out[DummyTileX][DummyTileY]),
-      .floo_rsp_i   (floo_rsp_in[DummyTileX][DummyTileY]),
-      .floo_wide_o  (floo_wide_out[DummyTileX][DummyTileY]),
-      .floo_req_i   (floo_req_in[DummyTileX][DummyTileY]),
-      .floo_rsp_o   (floo_rsp_out[DummyTileX][DummyTileY]),
-      .floo_wide_i  (floo_wide_in[DummyTileX][DummyTileY])
-    );
-  end
-
   /////////////////////
   // NoC Connections //
   /////////////////////
