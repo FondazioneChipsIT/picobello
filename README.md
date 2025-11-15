@@ -8,8 +8,8 @@
 
 This is an experimental branch to support VCS and Xcelium Simulator. Some edits have been made that change standard behavior of repo's make file:
 
-- If you don't have bender you can download it by running `source install-bender.sh` in a bash shell. It will be installed in the repo dir and added in the env PATH variable. If you installed bender in this way you can set again the env variable by running `source install-bender.sh`.
-- All software targets have been disabled. All precompiled test binary are shipped with the repo.
+- If you don't have bender you can download it by running `source install-bender.sh` in a bash shell. It will be installed in the repo dir and added in the env PATH variable. If you installed bender in this way, you can set again the env variable by running `source install-bender.sh`.
+- All software targets have been disabled. All precompiled test binary are shipped with the repo. Therefore, you can ingore the compiler requirements (and the relative warnings related to their absence while running make targets).
 - To run VCS use `make vcs-clean vcs-compile` and then use `make vcs-run`.
 - To run Xcelium use `make xcelium-clean xcelium-compile` and then use `make xcelium-run-batch` or `make xcelium-run` to run it with the GUI.
 - When running both VCS and Xcelium you can use `CHS_BINARY`, `SN_BINARY` and `PRELMODE` like with QuestaSim 

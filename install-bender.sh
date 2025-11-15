@@ -6,7 +6,7 @@
 if [ ! -f bender/bender ]; then
   mkdir -p bender
   cd bender
-  curl --proto '=https' --tlsv1.2 https://pulp-platform.github.io/bender/init -sSf | sh -s -- 0.28.1
+  curl --proto '=https' --tlsv1.2 https://pulp-platform.github.io/bender/init -sSf | sh -s -- 0.28.2
   cd ..
 fi
 
