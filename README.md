@@ -99,26 +99,26 @@ make sn-tests
 ```
 
 ### Platform simulation
-The Picobello simulation flow currently only supports Questasim.
+The Picobello simulation flow supports Questasim, VCS, and Xcelium.
 To build the RTL code, do:
 
 ```bash
-make vsim-compile
+make (vsim|vcs|xcelium)-compile
 ```
 
 Tests can be executed by setting all the required command-line variable for Cheshire, see the [Cheshire Docs](https://pulp-platform.github.io/cheshire/gs/) for more details.
 To run a simple Chehire helloworld in Picobello, do the following:
 
 ```bash
-make vsim-run CHS_BINARY=sw/cheshire/tests/helloworld.spm.elf
+make (vsim|vcs|xcelium)-run CHS_BINARY=sw/cheshire/tests/helloworld.spm.elf
 ```
 To run an offloading example test for Snitch, do:
 
 ```bash
-make vsim-run CHS_BINARY=sw/cheshire/tests/simple_offload.spm.elf SN_BINARY=sw/snitch/tests/build/simple.elf
+make (vsim|vcs|xcelium)-run CHS_BINARY=sw/cheshire/tests/simple_offload.spm.elf SN_BINARY=sw/snitch/tests/build/simple.elf
 ```
 
-Use the `vsim-run-batch` command to run tests in batch mode with RTL optimizations to reduce the Questasim runtime.
+Use the `(vsim|vcs|xcelium)-run-batch` command to run tests in batch mode with RTL optimizations to reduce the simulation runtime.
 
 Use the `PRELMODE=3` flag to enable fast preload of the Snitch binary, and speed up the simulation.
 
@@ -127,7 +127,7 @@ Said applications usually come with a Python verification script that can check 
 For example, a verification script for the GEMM kernel can be found under `$(bender path snitch_cluster)/sw/blas/gemm/scripts/verify.py`
 To run an application on Snitch and verify its results, do:
 ```bash
-make vsim-run-batch-verify VERIFY_PY=$(bender path snitch_cluster)/sw/blas/gemm/scripts/verify.py PRELMODE=3 CHS_BINARY=sw/cheshire/tests/simple_offload.spm.elf SN_BINARY=sw/snitch/apps/blas/gemm/build/gemm.elf
+make (vsim|vcs|xcelium)-run-batch-verify VERIFY_PY=$(bender path snitch_cluster)/sw/blas/gemm/scripts/verify.py PRELMODE=3 CHS_BINARY=sw/cheshire/tests/simple_offload.spm.elf SN_BINARY=sw/snitch/apps/blas/gemm/build/gemm.elf
 ```
 
 ### Additional help
