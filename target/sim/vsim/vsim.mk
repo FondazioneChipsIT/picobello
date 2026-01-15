@@ -12,6 +12,7 @@ VLOG_ARGS = -work $(VSIM_WORK)
 VLOG_ARGS += -suppress vlog-2583
 VLOG_ARGS += -suppress vlog-13314
 VLOG_ARGS += -suppress vlog-13233
+VLOG_ARGS += -suppress vlog-8386
 VLOG_ARGS += -timescale 1ns/1ps
 
 VSIM_FLAGS = -work $(VSIM_WORK)
@@ -20,8 +21,7 @@ VSIM_FLAGS += -suppress 8386
 VSIM_FLAGS += -suppress 13314
 VSIM_FLAGS += -quiet
 VSIM_FLAGS += -64
-
-VSIM_FLAGS_GUI = -voptargs=+acc
+VSIM_FLAGS = -voptargs=+acc
 
 define add_vsim_flag
 ifdef $(1)
