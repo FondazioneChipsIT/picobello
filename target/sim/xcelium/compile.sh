@@ -46,7 +46,7 @@ datamover_DIR="$(bender path datamover)"
 floo_noc_DIR="$(bender path floo_noc)"
 redmule_DIR="$(bender path redmule)"
 snitch_cluster_DIR="$(bender path snitch_cluster)"
-XCELIUM_BIN_DIR="$(type -P $XCELIUM xrun | rev | cut -c6- | rev)"
+XCELIUM_BIN_DIR="$(type -P $XCELIUM xrun | sed 's/\(.*\)bin.*/\1/')bin"
 
 xmvlog -SV \
     -64BIT \
