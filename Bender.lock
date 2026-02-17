@@ -383,7 +383,7 @@ packages:
     - common_cells
     - register_interface
   snitch_cluster:
-    revision: f27c66a1cb02f4c32f36e50cf6396aee36f9614b
+    revision: ee5c99e879ffe581a4182b3f19b7c74bbde28dd7
     version: null
     source:
       Git: https://github.com/FondazioneChipsIT/snitch_cluster.git
