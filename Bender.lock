@@ -88,7 +88,7 @@ packages:
     - common_cells
     - register_interface
   cheshire:
-    revision: b94a6de5bde98d28ae1d90e29ad37cd6d20d5550
+    revision: 7526515ab7992186837bc3e6fbc9acead536b1a0
     version: null
     source:
       Git: https://github.com/FondazioneChipsIT/cheshire.git
