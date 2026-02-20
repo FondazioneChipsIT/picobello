@@ -1,0 +1,3 @@
+overrides:
+  apb_uart: { git: "https://github.com/pulp-platform/apb_uart.git", rev: 6bec3304a3cfbcb1579e2a4db7a5922a15c1af7d }
+  axi_llc:  { git: "https://github.com/pulp-platform/axi_llc.git", rev: c440dea23b671f69a3629e593c54351675d5385d }
