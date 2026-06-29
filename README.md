@@ -140,7 +140,7 @@ The evaluation creteria for the emulator tender will be:
 * Number of code lines changed in DUT
 * Number of code lines changed in testbench
 
-The test to be executed for the emulator performance evaluation can be executed by running:
+The target test for the emulator performance evaluation can be executed by running:
 ```bash
 make (vsim|vcs|xcelium)-run CHS_BINARY=sw/cheshire/tests/simple_offload.spm.elf SN_BINARY=sw/snitch/tests/build/redmule.elf
 ```
