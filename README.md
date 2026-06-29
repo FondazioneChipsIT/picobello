@@ -12,7 +12,7 @@ This is an experimental branch to support VCS and Xcelium Simulator. Some edits 
 - All software targets have been disabled. All precompiled test binaries are shipped with the repo. Therefore, you can ingore the compiler requirements (and the relative warnings related to their absence while running make targets).
 - To run VCS use `make vcs-clean vcs-compile` and then use `make vcs-run`.
 - To run Xcelium use `make xcelium-clean xcelium-compile` and then use `make xcelium-run-batch` or `make xcelium-run` to run it with the GUI.
-- When running both VCS and Xcelium you can use `CHS_BINARY`, `SN_BINARY` and `PRELMODE` like with QuestaSim 
+- When running both VCS and Xcelium you can use `CHS_BINARY`, `SN_BINARY` and `PRELMODE` like with QuestaSim
 
 ## 🚧 Getting started (currently in early development)
 
@@ -128,6 +128,21 @@ For example, a verification script for the GEMM kernel can be found under `$(ben
 To run an application on Snitch and verify its results, do:
 ```bash
 make (vsim|vcs|xcelium)-run-batch-verify VERIFY_PY=$(bender path snitch_cluster)/sw/blas/gemm/scripts/verify.py PRELMODE=3 CHS_BINARY=sw/cheshire/tests/simple_offload.spm.elf SN_BINARY=sw/snitch/apps/blas/gemm/build/gemm.elf
+```
+
+## Emulator Tender
+
+The evaluation creteria for the emulator tender will be:
+* Execution speed with 0% waveforms logging
+* Execution speed with 100% waveforms logging
+* % of waveforms than can be logged for the benchmark (if not 100%)
+* Compilation time
+* Number of code lines changed in DUT
+* Number of code lines changed in testbench
+
+The test to be executed for the emulator performance evaluation can be executed by running:
+```bash
+make (vsim|vcs|xcelium)-run CHS_BINARY=sw/cheshire/tests/simple_offload.spm.elf SN_BINARY=sw/snitch/tests/build/redmule.elf
 ```
 
 ### Additional help
